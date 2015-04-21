@@ -1,1 +1,1 @@
-web: bin/java htest/Hello
+web: java -cp htest/ Hello
