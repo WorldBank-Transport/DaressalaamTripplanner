@@ -1,1 +1,1 @@
-web: java htest/Hello
+web: bin/java htest/Hello
