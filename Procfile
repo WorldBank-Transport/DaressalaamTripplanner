@@ -1,1 +1,1 @@
-web: ./otp --graphs graphs --router dar --port 9090 --server
+web: ./otp --graphs graphs --router dar --port 8080 --server
