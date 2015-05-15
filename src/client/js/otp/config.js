@@ -100,8 +100,8 @@ otp.config = {
      * Site name / description / branding display options
      */
 
-    siteName            : "My OTP Instance",
-    siteDescription     : "An OpenTripPlanner deployment.",
+    siteName            : "Dar es salaam | Tripplanner",
+    siteDescription     : "Dar es salaam multimodal tripplanner",
     logoGraphic         : 'images/otp_logo_darkbg_40px.png',
     // bikeshareName    : "",
     //Enable this if you want to show frontend language chooser
