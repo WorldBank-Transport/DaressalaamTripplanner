@@ -309,6 +309,7 @@ otp.modules.planner.PlannerModule =
 
     	apiMethod = apiMethod || 'plan';
         var url = otp.config.hostname + '/' + otp.config.restService + '/' + apiMethod;
+        
         this.pathLayer.clearLayers();
 
         var this_ = this;
@@ -363,6 +364,14 @@ otp.modules.planner.PlannerModule =
 
         this.planTripRequestCount = 0;
 
+        this.planTripRequest(url, queryParams, function(tripPlan) {
+            var restoring = (existingQueryParams !== undefined)
+            this_.processPlan(tripPlan, restoring);
+
+            this_.updateTipStep(3);
+        });
+        //query the walk itinerary
+        queryParams.mode = "WALK";
         this.planTripRequest(url, queryParams, function(tripPlan) {
             var restoring = (existingQueryParams !== undefined)
             this_.processPlan(tripPlan, restoring);
