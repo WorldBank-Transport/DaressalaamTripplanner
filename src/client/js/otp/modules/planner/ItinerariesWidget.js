@@ -95,7 +95,8 @@ otp.widgets.ItinerariesWidget =
 
         this.clear();
         //TRANSLATORS: widget title
-        this.setTitle(ngettext("%d Itinerary Returned", "%d Itineraries Returned", this.itineraries.length));
+        this.setTitle(ngettext("%d Itinerary Returned", "%d Itineraries Returned", this.itineraries.length, queryParams.mode));
+        //added by sam
 
         var html = "<div id='"+divId+"' class='otp-itinsAccord'></div>";
         this.itinsAccord = $(html).appendTo(this.$());

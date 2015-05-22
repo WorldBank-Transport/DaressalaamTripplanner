@@ -202,11 +202,11 @@ otp.modules.planner.PlannerModule =
 
     handleClick : function(event) {
         if(this.startLatLng == null) {
-        	this.setStartPoint(new L.LatLng(event.latlng.lat, event.latlng.lng), true);
+            this.setStartPoint(new L.LatLng(event.latlng.lat, event.latlng.lng), true);
         }
 
         else if(this.endLatLng == null) {
-        	this.setEndPoint(new L.LatLng(event.latlng.lat, event.latlng.lng), true);
+            this.setEndPoint(new L.LatLng(event.latlng.lat, event.latlng.lng), true);
         }
     },
 
@@ -287,11 +287,11 @@ otp.modules.planner.PlannerModule =
     },
 
     restoreMarkers : function(queryParams) {
-      	this.startLatLng = otp.util.Geo.stringToLatLng(otp.util.Itin.getLocationPlace(queryParams.fromPlace));
-    	this.setStartPoint(this.startLatLng, false);
+        this.startLatLng = otp.util.Geo.stringToLatLng(otp.util.Itin.getLocationPlace(queryParams.fromPlace));
+        this.setStartPoint(this.startLatLng, false);
 
-      	this.endLatLng = otp.util.Geo.stringToLatLng(otp.util.Itin.getLocationPlace(queryParams.toPlace));
-    	this.setEndPoint(this.endLatLng, false);
+        this.endLatLng = otp.util.Geo.stringToLatLng(otp.util.Itin.getLocationPlace(queryParams.toPlace));
+        this.setEndPoint(this.endLatLng, false);
     },
 
     planTrip : function(existingQueryParams, apiMethod) {
@@ -300,16 +300,15 @@ otp.modules.planner.PlannerModule =
 
         //this.noTripWidget.hide();
 
-    	if(this.currentRequest !== null)
+        if(this.currentRequest !== null)
         {
-    		//console.log("Canceling current request.");
-        	this.currentRequest.abort();
-        	this.currentRequest = null;
+            //console.log("Canceling current request.");
+            this.currentRequest.abort();
+            this.currentRequest = null;
         }
 
-    	apiMethod = apiMethod || 'plan';
+        apiMethod = apiMethod || 'plan';
         var url = otp.config.hostname + '/' + otp.config.restService + '/' + apiMethod;
-        
         this.pathLayer.clearLayers();
 
         var this_ = this;
@@ -317,7 +316,7 @@ otp.modules.planner.PlannerModule =
         var queryParams = null;
 
         if(existingQueryParams) {
-        	queryParams = existingQueryParams;
+            queryParams = existingQueryParams;
         }
         else
         {
@@ -327,7 +326,7 @@ otp.modules.planner.PlannerModule =
             }
 
             var addToStart = this.arriveBy ? 0 : this.startTimePadding;
-       	    queryParams = {
+            queryParams = {
                 fromPlace: this.getStartOTPString(),
                 toPlace: this.getEndOTPString(),
                 time : (this.time) ? otp.util.Time.correctAmPmTimeString(this.time) : moment().format("h:mma"),
@@ -370,9 +369,9 @@ otp.modules.planner.PlannerModule =
 
             this_.updateTipStep(3);
         });
-        //query the walk itinerary
         queryParams.mode = "WALK";
-        this.planTripRequest(url, queryParams, function(tripPlan) {
+
+         this.planTripRequest(url, queryParams, function(tripPlan) {
             var restoring = (existingQueryParams !== undefined)
             this_.processPlan(tripPlan, restoring);
 
@@ -522,32 +521,32 @@ otp.modules.planner.PlannerModule =
             else if(leg.mode === 'BICYCLE') {
                 if(queryParams.mode === 'WALK,BICYCLE_RENT') { // bikeshare trip
                         //TRANSLATORS: shown when clicked on route on map
-                	polyline.bindPopup(_tr('Your %(bike_share_name)s route', {'bike_share_name': otp.config.bikeshareName}));
+                    polyline.bindPopup(_tr('Your %(bike_share_name)s route', {'bike_share_name': otp.config.bikeshareName}));
                     //var start_and_end_stations = this.processStations(polyline.getLatLngs()[0], polyline.getLatLngs()[polyline.getLatLngs().length-1]);
                 }
                 else { // regular bike trip
                         //TRANSLATORS: Text which is shown when clicking bike route
                         //in a map
-                	polyline.bindPopup(_tr('Your bike route'));
-                	//this.resetStationMarkers();
+                    polyline.bindPopup(_tr('Your bike route'));
+                    //this.resetStationMarkers();
                 }
             }
             else if(leg.mode === 'WALK') {
                 if(queryParams.mode === 'WALK,BICYCLE_RENT') {
                     if(i == 0) {
                         //TRANSLATORS:Shown in map when clicking on a route
-                    	polyline.bindPopup(_tr('Walk to the %(bike_share_name)s dock.', {'bike_share_name': otp.config.bikeshareName}));
+                        polyline.bindPopup(_tr('Walk to the %(bike_share_name)s dock.', {'bike_share_name': otp.config.bikeshareName}));
                     }
                     if(i == 2) {
                         //TRANSLATORS: Shown in map when clicking on a route
-                    	polyline.bindPopup(_tr('Walk from the %(bike_share_name)s dock to your destination.', {'bike_share_name': otp.config.bikeshareName}));
+                        polyline.bindPopup(_tr('Walk from the %(bike_share_name)s dock to your destination.', {'bike_share_name': otp.config.bikeshareName}));
                     }
                 }
                 else { // regular walking trip
                     //TRANSLATORS: Text which is shown when clicking walking
                     //route in a map
-                	polyline.bindPopup(_tr('Your walk route'));
-                	//this.resetStationMarkers();
+                    polyline.bindPopup(_tr('Your walk route'));
+                    //this.resetStationMarkers();
                 }
             }
             //FIXME: CAR is missing
@@ -615,29 +614,29 @@ otp.modules.planner.PlannerModule =
 
     savePlan : function(data) {
 
-    	var data_ = {data: data, startLat: this.startLatLng.lat, startLon: this.startLatLng.lng, endLat: this.endLatLng.lat, endLon: this.endLatLng.lng, parrent : this.currentHash };
-    	otp.util.DataStorage.store(data_, this );
+        var data_ = {data: data, startLat: this.startLatLng.lat, startLon: this.startLatLng.lng, endLat: this.endLatLng.lat, endLon: this.endLatLng.lng, parrent : this.currentHash };
+        otp.util.DataStorage.store(data_, this );
     },
 
     // legacy -- deprecated by restoreTrip (above)
     restorePlan : function(data){
 
-    	this.startLatLng = new L.LatLng(data.startLat, data.startLon);
-    	this.setStartPoint(this.startLatLng, false);
+        this.startLatLng = new L.LatLng(data.startLat, data.startLon);
+        this.setStartPoint(this.startLatLng, false);
 
-    	this.endLatLng = new L.LatLng(data.endLat, data.endLon);
-    	this.setEndPoint(this.endLatLng, false);
+        this.endLatLng = new L.LatLng(data.endLat, data.endLon);
+        this.setEndPoint(this.endLatLng, false);
 
-    	this.webapp.setBounds(new L.LatLngBounds([this.startLatLng, this.endLatLng]));
+        this.webapp.setBounds(new L.LatLngBounds([this.startLatLng, this.endLatLng]));
 
-    	this.planTrip(data.data, true);
+        this.planTrip(data.data, true);
     },
 
 
     newTrip : function(hash) {
-    	this.currentHash = hash;
+        this.currentHash = hash;
 
-    	window.location.hash = this.currentHash;
+        window.location.hash = this.currentHash;
 
         /*var shareRoute = $("#share-route");
         shareRoute.find(".addthis_toolbox").attr("addthis:url", otp.config.siteUrl+"/#"+this.currentHash);
