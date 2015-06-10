@@ -22,9 +22,9 @@ otp.modules.planner.defaultQueryParams = {
     arriveBy                        : false,
     wheelchair                      : false,
     mode                            : "TRANSIT,WALK",
-    maxWalkDistance                 : 804.672, // 1/2 mi.
-    metricDefaultMaxWalkDistance    : 750, // meters
-    imperialDefaultMaxWalkDistance  : 804.672, // 0.5 mile
+    maxWalkDistance                 : 4828.032, // 804.672, 1/2 mi.
+    metricDefaultMaxWalkDistance    : 7500, //750, meters
+    imperialDefaultMaxWalkDistance  : 4828.032, //804.672,0.5 mile
     preferredRoutes                 : null,
     otherThanPreferredRoutesPenalty : 300,
     bannedTrips                     : null,
@@ -369,14 +369,6 @@ otp.modules.planner.PlannerModule =
 
             this_.updateTipStep(3);
         });
-        // queryParams.mode = "WALK";
-
-        //  this.planTripRequest(url, queryParams, function(tripPlan) {
-        //     var restoring = (existingQueryParams !== undefined)
-        //     this_.processPlan(tripPlan, restoring);
-
-        //     this_.updateTipStep(3);
-        // });
     },
 
     planTripRequest : function(url, queryParams, successCallback) {

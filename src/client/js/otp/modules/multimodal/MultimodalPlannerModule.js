@@ -100,25 +100,9 @@ otp.modules.multimodal.MultimodalPlannerModule =
     },
             
     processPlan : function(tripPlan, restoring) {
-        
         if(this.itinWidget == null) {
-            this.itinWidget = new otp.widgets.ItinerariesWidget(this.id+"-itinWidget"+tripPlan.queryParams.mode, this);
-            console.log("inside");
-        }else{
-            var id = this.itinWidget.id;
-            if(this.itinWidget.id.indexOf(tripPlan.queryParams.mode) != -1){
-
-            this.itinWidget = new otp.widgets.ItinerariesWidget(this.itinWidget.id+tripPlan.queryParams.mode,this);
-            console.log("new "+this.itinWidget.id.indexOf(tripPlan.queryParams.mode));
-            this.itinWidget.hide();
-            }
-            
-
-        var elem = document.getElementById(id);
-        var newE = document.getElementById(this.itinWidget.id);
-        newE.style.left = elem.style.left + 402;
+            this.itinWidget = new otp.widgets.ItinerariesWidget(this.id+"-itinWidget", this);
         }
-
         if(restoring && this.restoredItinIndex) {
             this.itinWidget.show();
             this.itinWidget.updateItineraries(tripPlan.itineraries, tripPlan.queryParams, this.restoredItinIndex);
