@@ -369,14 +369,14 @@ otp.modules.planner.PlannerModule =
 
             this_.updateTipStep(3);
         });
-        queryParams.mode = "WALK";
+        // queryParams.mode = "WALK";
 
-         this.planTripRequest(url, queryParams, function(tripPlan) {
-            var restoring = (existingQueryParams !== undefined)
-            this_.processPlan(tripPlan, restoring);
+        //  this.planTripRequest(url, queryParams, function(tripPlan) {
+        //     var restoring = (existingQueryParams !== undefined)
+        //     this_.processPlan(tripPlan, restoring);
 
-            this_.updateTipStep(3);
-        });
+        //     this_.updateTipStep(3);
+        // });
     },
 
     planTripRequest : function(url, queryParams, successCallback) {
