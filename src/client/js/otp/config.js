@@ -102,7 +102,7 @@ otp.config = {
 
     siteName            : "Dar es salaam | Tripplanner",
     siteDescription     : "Dar es salaam multimodal tripplanner",
-    logoGraphic         : 'images/otp_logo_darkbg_40px.png',
+    logoGraphic         : 'images/TODI_Logo.png',
     // bikeshareName    : "",
     //Enable this if you want to show frontend language chooser
     showLanguageChooser : true,

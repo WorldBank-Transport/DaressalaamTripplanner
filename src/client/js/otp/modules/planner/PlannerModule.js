@@ -373,6 +373,7 @@ otp.modules.planner.PlannerModule =
 
     planTripRequest : function(url, queryParams, successCallback) {
         var this_ = this;
+        console.log(queryParams.maxWalkDistance);
         this.currentRequest = $.ajax(url, {
             data:       queryParams,
             dataType:   'JSON',
