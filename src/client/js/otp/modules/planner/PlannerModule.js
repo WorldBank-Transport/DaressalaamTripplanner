@@ -434,7 +434,199 @@ otp.modules.planner.PlannerModule =
                     }
                 }
                 else {
+                    var existingQueryParams = queryParams;
+
+                    if(queryParams.maxWalkDistance == 160.9344)
+                    {
+                        queryParams.maxWalkDistance = 321.8688;
+
+                        console.log("first");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+
+                    else if(queryParams.maxWalkDistance == 321.8688)
+                    {
+                        queryParams.maxWalkDistance = 402.336;
+
+                        console.log("second");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 402.336)
+                    {
+                        queryParams.maxWalkDistance = 482.8032;
+
+                        console.log("third");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 482.8032)
+                    {
+                        queryParams.maxWalkDistance = 643.7376;
+
+                        console.log("four");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 643.7376)
+                    {
+                        queryParams.maxWalkDistance = 804.672;
+
+                        console.log("five");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+
+                    else if(queryParams.maxWalkDistance == 804.672)
+                    {
+                        queryParams.maxWalkDistance = 1207.008;
+
+                        console.log("six");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }else if(queryParams.maxWalkDistance == 1207.008){
+                        queryParams.maxWalkDistance = 1609.344;
+                        console.log("seven");
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }else if(queryParams.maxWalkDistance == 1609.344){
+                        queryParams.maxWalkDistance = 2414.016;
+                        console.log("eight");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 2414.016){
+                        queryParams.maxWalkDistance = 3218.688;
+
+                        console.log("nine");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }else if(queryParams.maxWalkDistance == 3218.688){
+                        queryParams.maxWalkDistance = 4023.36;
+
+                        console.log("ten");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }else if(queryParams.maxWalkDistance == 4023.36){
+                        queryParams.maxWalkDistance = 4828.032;
+
+                        console.log("eleven");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 4828.032){
+                        queryParams.maxWalkDistance = 5632.704;
+
+                        console.log("twelve");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }else if(queryParams.maxWalkDistance == 5632.704){
+                        queryParams.maxWalkDistance = 6437.376;
+
+                        console.log("thirteen");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else if(queryParams.maxWalkDistance == 6437.376){
+                        queryParams.maxWalkDistance =  7242.048000000001;
+
+                        console.log("fourteen");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                     else if(queryParams.maxWalkDistance == 7242.048000000001){
+                        queryParams.maxWalkDistance =  8046.72;
+
+                        console.log("fifteen");
+
+                         this_.planTripRequest(url, queryParams, function(tripPlan) {
+                    var restoring = (existingQueryParams !== undefined)
+                    this_.processPlan(tripPlan, restoring);
+
+                    this_.updateTipStep(3);
+                     });
+                    }
+                    else{
+
+
                     this_.noTripFound(data.error);
+                    //this_.noTripWidget.setContent(data.error.msg);
+                    //this_.noTripWidget.show();
+                    }
+
+
+
+                    //this_.noTripFound(data.error);
                     //this_.noTripWidget.setContent(data.error.msg);
                     //this_.noTripWidget.show();
                 }
