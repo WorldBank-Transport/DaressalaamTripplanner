@@ -10,6 +10,7 @@ $(function() {
 
     /* --- LEAFLET STUFF --- */
     // Initialize a map
+    console.log("creating map");
     gui.map = L.map('map', {
         minZoom : 10,
         maxZoom : 18,
