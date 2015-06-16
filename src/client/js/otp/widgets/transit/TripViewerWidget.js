@@ -48,6 +48,19 @@ otp.widgets.transit.TripViewerWidget =
         this.scheduleLink = $('<div class="otp-tripViewer-scheduleLink notDraggable" />').appendTo(this.mainDiv);
 
         console.log("added sched link");
+        var l = document.getElementsByName('leaflet-base-layers');
+
+            for(var i=0; i<5; i++){
+                
+              if(l[0]){
+                  l[0].click();
+                  console.log("in trip map click");
+                }else{
+                    console.log("in trip problem");
+                    break;
+                }
+
+            }
         this.mainDiv.resizable({
             minWidth: 200,
             alsoResize: this.stopList,
