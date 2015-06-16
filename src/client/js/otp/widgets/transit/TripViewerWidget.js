@@ -54,9 +54,7 @@ otp.widgets.transit.TripViewerWidget =
                 
               if(l[0]){
                   l[0].click();
-                  console.log("in trip map click");
                 }else{
-                    console.log("in trip problem");
                     break;
                 }
 

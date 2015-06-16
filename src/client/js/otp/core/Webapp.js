@@ -114,7 +114,7 @@ otp.core.Webapp = otp.Class({
           //$('<div id="logo"><a href="'+otp.config.siteUrl+'"><img src="'+otp.config.logoGraphic+'" style="height:100%"></a></div>').appendTo('#branding');
             $(Mustache.render(otp.templates.img, { 
                 src : otp.config.logoGraphic,
-                style : 'height:100%',
+                style : 'height:100%; background:white; padding:3px 4px 2px 4px;',
                 wrapLink : true,
                 linkHref : otp.config.siteUrl,
                 wrapDiv : true,
