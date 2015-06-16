@@ -54,24 +54,12 @@ otp.locale.English = {
     infoWidgets : [
             {
                 title: 'About',
-                content: '<p>About this site</p>
-                         <p>This is a Multimodal Dar es salaam Tripplanner 
-                         using BRT and daladala as main transit agencies.
-                         It has been developed by Tanzania Open Data Initiative 
-                         (TODI) supported by World Bank.
-                         </p>',
+                content: '<p>About this site</p><p>This is a Multimodal Dar es salaam Tripplanner using BRT and daladala as main transit agencies.It has been developed by Tanzania Open Data Initiative (TODI) supported by World Bank.</p>',
                 //cssClass: 'otp-contactWidget',
             },
             {
                 title: 'Contact',
-                content: '<p>Comments? Contact us at</p>
-                          <p>
-                           Tanzania
-                           50 Mirambo Street P. O. Box 2054 Dar es Salaam
-                           Tel : +255-22-216-3246
-                           <a href="mailto:miliffe@worldbank.org" >
-                           miliffe@worldbank.org</a>
-                           </p>'
+                content: '<p>Comments? Contact us at</p><p> Tanzania 50 Mirambo Street <br> P. O. Box 2054 Dar es Salaam<br>Tel : +255-22-216-3246 <br><a href="mailto:miliffe@worldbank.org" >miliffe@worldbank.org</a></p>',
             },
     ],
 
