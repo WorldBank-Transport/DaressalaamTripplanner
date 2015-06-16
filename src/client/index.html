@@ -200,9 +200,16 @@ $(document).ready(function() {
 	var l = document.getElementsByName('leaflet-base-layers');
 
 	for(var i=0; i<1; i++){
-		console.log("first click");
+		
+
+	if(l[0]){
 	  l[0].click();
+	  console.log("first click");
+	}else{
+       console.log("second problem");
+                
 	}
+}
 	//Sets datepicker language based on selected/detected language in config.js
 	$.datepicker.setDefaults($.datepicker.regional[otp.config.locale.config.datepicker_locale_short]);
     var templateUrls = [ //new Array(
@@ -229,8 +236,14 @@ $(document).ready(function() {
     var l = document.getElementsByName('leaflet-base-layers');
 
 	for(var i=0; i<1; i++){
-		console.log("second click");
+		
+	  if(l[0]){
 	  l[0].click();
+	  console.log("second click");
+	   }else{
+             console.log("second problem");
+        }
+
 	}
 
 });

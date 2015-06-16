@@ -142,8 +142,14 @@ otp.core.Map = otp.Class({
         var l = document.getElementsByName('leaflet-base-layers');
 
             for(var i=0; i<1; i++){
-                console.log("inside map click");
-              l[0].click();
+                
+              if(l[0]){
+                  l[0].click();
+                  console.log("inside map click");
+                }else{
+                    console.log("inner problem");
+                }
+
             }  
     },
     
