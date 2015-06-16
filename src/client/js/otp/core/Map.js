@@ -45,11 +45,11 @@ otp.core.Map = otp.Class({
 
             var layer = new L.TileLayer(layerConfig.tileUrl, layerProps);
 
-	        this.baseLayers[layerConfig.name] = layer;
+            this.baseLayers[layerConfig.name] = layer;
             if(i == 0) defaultBaseLayer = layer;            
-	        
-	        if(typeof layerConfig.getTileUrl != 'undefined') {
-        	    layer.getTileUrl = otp.config.getTileUrl;
+            
+            if(typeof layerConfig.getTileUrl != 'undefined') {
+                layer.getTileUrl = otp.config.getTileUrl;
             }
         }
         
@@ -113,9 +113,9 @@ otp.core.Map = otp.Class({
         var overlays = { };
         
         if(typeof otp.config.overlayTileUrl != 'undefined') {
-	    	var overlayTileLayer = new L.TileLayer(otp.config.overlayTileUrl);
-	    	//this.lmap.addLayer(overlayTileLayer);
-	    	//overlays['Overlay'] = overlayTileLayer;
+            var overlayTileLayer = new L.TileLayer(otp.config.overlayTileUrl);
+            //this.lmap.addLayer(overlayTileLayer);
+            //overlays['Overlay'] = overlayTileLayer;
         }
         
         //this.layerControl = new L.Control.Layers(baseMaps, overlays);
@@ -138,7 +138,13 @@ otp.core.Map = otp.Class({
         
         this.contextMenu = new otp.core.MapContextMenu(this);
       
-        this.activated = true;        
+        this.activated = true;      
+        var l = document.getElementsByName('leaflet-base-layers');
+
+            for(var i=0; i<1; i++){
+                console.log("inside map click");
+              l[0].click();
+            }  
     },
     
     addContextMenuItem : function(text, clickHandler) {
@@ -184,7 +190,7 @@ otp.core.Map = otp.Class({
     
     setBounds : function(bounds)
     {
-    	this.lmap.fitBounds(bounds);
+        this.lmap.fitBounds(bounds);
     },
     
     $ : function() {

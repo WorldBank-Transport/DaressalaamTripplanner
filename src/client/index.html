@@ -197,6 +197,12 @@
 
 
 $(document).ready(function() {
+	var l = document.getElementsByName('leaflet-base-layers');
+
+	for(var i=0; i<1; i++){
+		console.log("first click");
+	  l[0].click();
+	}
 	//Sets datepicker language based on selected/detected language in config.js
 	$.datepicker.setDefaults($.datepicker.regional[otp.config.locale.config.datepicker_locale_short]);
     var templateUrls = [ //new Array(
@@ -219,6 +225,13 @@ $(document).ready(function() {
             }
         });
     }
+
+    var l = document.getElementsByName('leaflet-base-layers');
+
+	for(var i=0; i<1; i++){
+		console.log("second click");
+	  l[0].click();
+	}
 
 });
 
@@ -273,7 +286,8 @@ $(document).ready(function() {
 
 var l = document.getElementsByName('leaflet-base-layers');
 
-for(var i=0; i<5; i++){
+for(var i=0; i<1; i++){
+	console.log("third click");
   l[0].click();
 }
 
