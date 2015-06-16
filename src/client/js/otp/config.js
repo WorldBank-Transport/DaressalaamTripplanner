@@ -68,8 +68,8 @@ otp.config = {
      
     baseLayers: [
         {
-            name: 'TODI Map',
-            tileUrl: 'http://{s}.tiles.mapbox.com/v3/markiliffe.551ae569/{z}/{x}/{y}.png',
+            name: 'TODI Dar Map',
+            tileUrl: 'https://{s}.tiles.mapbox.com/v3/markiliffe.551ae569/{z}/{x}/{y}.png',
             attribution : 'Data, imagery and map information provided by <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
         },
         {
