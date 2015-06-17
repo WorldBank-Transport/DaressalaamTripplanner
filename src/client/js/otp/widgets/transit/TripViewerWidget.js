@@ -60,6 +60,7 @@ otp.widgets.transit.TripViewerWidget =
 
             }
        $('#otp-planner-optionsWidget-timeSelector-time').val(moment("07:00","hh:mm").format(otp.config.locale.time.time_format))
+       $('#otp-planner-optionsWidget-timeSelector-time').keyup();
         this.mainDiv.resizable({
             minWidth: 200,
             alsoResize: this.stopList,
