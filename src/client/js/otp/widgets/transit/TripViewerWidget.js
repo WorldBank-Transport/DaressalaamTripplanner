@@ -59,10 +59,7 @@ otp.widgets.transit.TripViewerWidget =
                 }
 
             }
-        var dateInput = document.getElementById('otp-planner-optionsWidget-timeSelector-time');
-     
-        dateInput.value = '8:00am';
-
+       
         this.mainDiv.resizable({
             minWidth: 200,
             alsoResize: this.stopList,

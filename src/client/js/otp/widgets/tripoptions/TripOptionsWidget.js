@@ -338,7 +338,7 @@ otp.widgets.tripoptions.TimeSelector =
         });
         $('#'+this.id+'-date').datepicker("setDate", new Date());
 
-        $('#'+this.id+'-time').val(moment().format(otp.config.locale.time.time_format))
+        $('#'+this.id+'-time').val(moment("07:00","hh:mm").format(otp.config.locale.time.time_format))
         .keyup(function() {
             if(otp.config.locale.time.time_format.toLowerCase().charAt(otp.config.locale.time.time_format.length-1) === 'a') {
                 var val = $(this).val().toLowerCase();
