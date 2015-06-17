@@ -60,9 +60,8 @@ otp.widgets.transit.TripViewerWidget =
 
             }
         var dateInput = document.getElementById('otp-planner-optionsWidget-timeSelector-time');
-        console.log(dateInput.value);
-        dateInput.value = '7:00am';
-        console.log("after"+dateInput.value);
+     
+        dateInput.value = '8:00am';
 
         this.mainDiv.resizable({
             minWidth: 200,

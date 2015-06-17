@@ -440,7 +440,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 321.8688;
 
-                        console.log("first");
+                        //console.log("first");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -454,7 +454,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 402.336;
 
-                        console.log("second");
+                       // console.log("second");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -467,7 +467,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 482.8032;
 
-                        console.log("third");
+                       // console.log("third");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -480,7 +480,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 643.7376;
 
-                        console.log("four");
+                       // console.log("four");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -493,7 +493,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 804.672;
 
-                        console.log("five");
+                        //console.log("five");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -507,7 +507,7 @@ otp.modules.planner.PlannerModule =
                     {
                         queryParams.maxWalkDistance = 1207.008;
 
-                        console.log("six");
+                        //console.log("six");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -517,7 +517,7 @@ otp.modules.planner.PlannerModule =
                      });
                     }else if(queryParams.maxWalkDistance == 1207.008){
                         queryParams.maxWalkDistance = 1609.344;
-                        console.log("seven");
+                       // console.log("seven");
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
                     this_.processPlan(tripPlan, restoring);
@@ -526,7 +526,7 @@ otp.modules.planner.PlannerModule =
                      });
                     }else if(queryParams.maxWalkDistance == 1609.344){
                         queryParams.maxWalkDistance = 2414.016;
-                        console.log("eight");
+                       // console.log("eight");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -538,7 +538,7 @@ otp.modules.planner.PlannerModule =
                     else if(queryParams.maxWalkDistance == 2414.016){
                         queryParams.maxWalkDistance = 3218.688;
 
-                        console.log("nine");
+                       // console.log("nine");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -549,7 +549,7 @@ otp.modules.planner.PlannerModule =
                     }else if(queryParams.maxWalkDistance == 3218.688){
                         queryParams.maxWalkDistance = 4023.36;
 
-                        console.log("ten");
+                        //console.log("ten");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -560,7 +560,7 @@ otp.modules.planner.PlannerModule =
                     }else if(queryParams.maxWalkDistance == 4023.36){
                         queryParams.maxWalkDistance = 4828.032;
 
-                        console.log("eleven");
+                        //console.log("eleven");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -572,7 +572,7 @@ otp.modules.planner.PlannerModule =
                     else if(queryParams.maxWalkDistance == 4828.032){
                         queryParams.maxWalkDistance = 5632.704;
 
-                        console.log("twelve");
+                        //console.log("twelve");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -583,7 +583,7 @@ otp.modules.planner.PlannerModule =
                     }else if(queryParams.maxWalkDistance == 5632.704){
                         queryParams.maxWalkDistance = 6437.376;
 
-                        console.log("thirteen");
+                        //console.log("thirteen");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -595,7 +595,7 @@ otp.modules.planner.PlannerModule =
                     else if(queryParams.maxWalkDistance == 6437.376){
                         queryParams.maxWalkDistance =  7242.048000000001;
 
-                        console.log("fourteen");
+                        //console.log("fourteen");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
@@ -607,7 +607,7 @@ otp.modules.planner.PlannerModule =
                      else if(queryParams.maxWalkDistance == 7242.048000000001){
                         queryParams.maxWalkDistance =  8046.72;
 
-                        console.log("fifteen");
+                        //console.log("fifteen");
 
                          this_.planTripRequest(url, queryParams, function(tripPlan) {
                     var restoring = (existingQueryParams !== undefined)
