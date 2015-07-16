@@ -212,7 +212,9 @@ public class LuceneIndex {
                     lr.id = doc.getField("id").stringValue();
                 }
                 String name = doc.getField("name").stringValue();
-                lr.description = category + " " + name + " " + code;
+               // lr.description = category + " " + name + " " + code;
+              //  *Samweli removed category and code to make result easily readable by user
+                lr.description = name;
                 result.add(lr);
             }
         } catch (Exception ex) {

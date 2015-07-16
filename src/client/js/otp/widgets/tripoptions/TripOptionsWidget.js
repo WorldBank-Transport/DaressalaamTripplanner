@@ -236,6 +236,7 @@ otp.widgets.tripoptions.LocationsSelector =
         input.autocomplete({
             delay: 500, // 500ms between requests.
             source: function(request, response) {
+                console.log(request.term+" request term");
                 this_.geocoders[this_.activeIndex].geocode(request.term, function(results) {
                     console.log("got results "+results.length);
                     response.call(this, _.pluck(results, 'description'));
