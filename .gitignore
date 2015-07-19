@@ -1,5 +1,6 @@
 dependency-reduced-pom.xml
 target/
+docs/
 build/
 dist/
 docs/_build/
@@ -9,12 +10,16 @@ otp-admin-client/src/main/webapp/js/otp-min.js
 otp-rest-servlet/src/main/resources/
 otp-openlayers-client/src/main/webapp/js/lib-min.js
 otp-openlayers-client/src/main/webapp/js/otp-min.js
+mkdocs.yml
+Procfile
 *~
-.classpath
+.classpathlgpl-3.0.txt
 .project
 .pydevproject
 .settings
 .gradle
+.properties
+.md
 *.ipr
 *.iml
 *.iws
